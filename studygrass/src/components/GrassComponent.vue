@@ -1,5 +1,5 @@
 <template>
-
+    <!-- ヒートマップ -->
     <div id="heatmap">
         <calendar-heatmap  
         :values="[
@@ -11,15 +11,11 @@
             { date: '2024-1-6', count: 5 },
             { date: '2024-1-7', count: 6 },
         ]" :end-date="Date()"></calendar-heatmap>
-
     </div>
-
-
 </template>
 
 <script setup>
 import { CalendarHeatmap } from 'vue3-calendar-heatmap'
-
 
 </script>
 
