@@ -9,6 +9,9 @@ Vue3
 chart.js
 cal-heatmap
 
+## リンク
+https://studygrass2.web.app/
+
 ## 説明  
 個人学習した科目・時間を記録してheatmap及びdountGrphに表示する  
 更新画面がないため何れ作りたい(=ﾟωﾟ)ﾉ  
@@ -30,6 +33,8 @@ cal-heatmap
 
 ## やりたいこと
 FirebaseのAuthenticationによる認証
+セッション管理
 CRUD処理(現状は上書き状態)
 ライフサイクルフックの完全理解
+
 
