@@ -10,6 +10,7 @@ import 'cal-heatmap/cal-heatmap.css';
 import { onMounted } from 'vue'
 import { db } from '../main.js'
 import { collection, getDocs, query } from 'firebase/firestore';
+//import {dorpdownOptions } from '@/common/common.js'
 
 // ヒートマップのデータ
 const heatmapData = [];
@@ -78,10 +79,13 @@ onMounted(async () => {
 <style>
 #cal-heatmap {
     /* 文字サイズ */
-    font-size: 10px;
+    font-size: 12px;
     /* heatmapサイズ */
-    transform: scale(0.7);
+    width: 90%;
+    height: 90%;
+    margin: auto;
     /* 中央に基準を縮小 */
+    transform: scale(0.9);
     transform-origin: center;
 }
 </style>

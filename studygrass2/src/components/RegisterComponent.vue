@@ -2,17 +2,18 @@
 
     <div class="register">
         <form>
+            <p>記録画面(=ﾟωﾟ)ﾉ</p>
             <p v-if="errMsg">学習日・学習内容・学習時間を入力してください（＾ω＾）・・・</p>
-            <label>学習日：</label>
+            <label>学習日※</label>
             <input type="date" id="date" v-model="dateVal" required>
             <br>
             <label>学習内容※</label>
             <select id="select" v-model="selectVal">
                 <option v-for="(value, label) in dorpdownOptions" :key="label" :value="value">{{ value }}</option>
             </select>
-            <label>学習時間※</label>
+            <label>学習時間※ 分単位</label>
             <input type="number" id="number" min="1" v-model="numVal">
-            <span>分</span>
+            
             <br>
             <label>ひとこと：</label>
             <textarea id="scrollable-textarea" v-model="textVal"></textarea>
@@ -21,7 +22,7 @@
         <!-- ボタンを押したら router-linkを発動-->
         <button @click="transitionHome()">ｷｬﾝｾﾙ</button>
     </div>
-    <p>記録画面(=ﾟωﾟ)ﾉ</p>
+
 
 </template>
 <script setup>
@@ -29,7 +30,7 @@ import { useRouter } from 'vue-router'
 import { db } from '../main.js'
 import { collection, addDoc } from 'firebase/firestore'
 import { ref } from 'vue'
-import {timeCount } from '@/common/common.js'
+import {timeCount,dorpdownOptions } from '@/common/common.js'
 
 
 
@@ -44,20 +45,18 @@ const errMsg = ref(false);
 
 
 // selectOption(暫定)
-const dorpdownOptions = {
-    option1: 'java',
-    option2: 'html/css',
-    option3: 'javascript',
-    option4: 'php',
-    option5: 'springboot',
-    option6: 'AWS',
-    option7: 'Linux',
-    option8: 'Typescript',
-    option9: 'python',
-    option10: 'SQL'
-};
-
-
+// const dorpdownOptions = {
+//     option1: 'java',
+//     option2: 'html/css',
+//     option3: 'javascript',
+//     option4: 'php',
+//     option5: 'springboot',
+//     option6: 'AWS',
+//     option7: 'Linux',
+//     option8: 'Typescript',
+//     option9: 'python',
+//     option10: 'SQL'
+// };
 
 // <script setup>でuseRouter()をインスタンス化する
 const router = useRouter();
@@ -107,27 +106,59 @@ async function addData() {
 
 <style scoped>
 .register {
-    border: 1px solid #000;
-    /* 枠線を追加 */
-    width: 700px;
-    /* 適切な幅を指定 */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px auto;
     padding: 20px;
-    /* 枠と内容の間の余白を追加 */
     text-align: center;
-    /* 内容を中央揃えにする */
-    margin: 0 auto;
-    /* 左右を自動的に中央揃えにする */
 }
 
-/* スクロール可能なテキストエリアのスタイル */
-#scrollable-textarea {
-    width: 200px;
-    /* テキストエリアの幅 */
-    height: 100px;
-    /* テキストエリアの高さ */
-    overflow: scroll;
-    /* スクロールバーを表示させる */
-    resize: none;
-    /* テキストエリアのリサイズを無効にする */
+.register form {
+    margin-bottom: 20px;
+}
+
+.register label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.register input,
+.register select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.register textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.register button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register button:hover {
+    background-color: #0056b3;
+}
+
+.register button + button {
+    margin-left: 10px;
 }
 </style>
