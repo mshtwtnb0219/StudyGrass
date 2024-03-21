@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "cal-heatmap": "^4.2.4",
+    "chart.js": "^4.4.2",
     "core-js": "^3.8.3",
     "firebase": "^10.9.0",
     "vue": "^3.2.13",
