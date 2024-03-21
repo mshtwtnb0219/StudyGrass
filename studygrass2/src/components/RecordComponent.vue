@@ -2,8 +2,6 @@
     <div>
         <!-- ボタンを押したら router-linkを発動-->
         <button  @click="transitionResister">記録する</button>
-        <p>{{ router.currentRoute.value.path }}</p>
-
     </div>
 
 </template>
