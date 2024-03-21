@@ -2,29 +2,61 @@
 
     <div class="register">
         <form>
-            <label>学習日</label>
-            <input type="date">
+            <p v-if="errMsg">学習日・学習内容・学習時間を入力してください（＾ω＾）・・・</p>
+            <label>学習日：</label>
+            <input type="date" id="date" v-model="dateVal" required>
             <br>
-            <label>学習内容</label>
-            <option>
-
-            </option>
+            <label>学習内容※</label>
+            <select id="select" v-model="selectVal">
+                <option v-for="(value, label) in dorpdownOptions" :key="label" :value="value">{{ value }}</option>
+            </select>
+            <label>学習時間※</label>
+            <input type="number" id="number" min="1" v-model="numVal">
+            <span>分</span>
             <br>
-            <label>ひとこと</label>
-            <input type="text" class="scrollable-textarea">
+            <label>ひとこと：</label>
+            <textarea id="scrollable-textarea" v-model="textVal"></textarea>
         </form>
         <button @click="addData()">登録</button>
         <!-- ボタンを押したら router-linkを発動-->
         <button @click="transitionHome()">ｷｬﾝｾﾙ</button>
     </div>
-
     <p>記録画面(=ﾟωﾟ)ﾉ</p>
 
 </template>
 <script setup>
 import { useRouter } from 'vue-router'
-import {db} from '../main.js'
-import { collection,addDoc} from 'firebase/firestore';
+import { db } from '../main.js'
+import { collection, addDoc } from 'firebase/firestore'
+import { ref } from 'vue'
+import {timeCount } from '@/common/common.js'
+
+
+
+// 入力フォームのデータを保持するリアクティブな変数
+const dateVal = ref('');
+const selectVal = ref('');
+const numVal = ref('');
+const textVal = ref('');
+
+// 入力チェック用のフラグ
+const errMsg = ref(false);
+
+
+// selectOption(暫定)
+const dorpdownOptions = {
+    option1: 'java',
+    option2: 'html/css',
+    option3: 'javascript',
+    option4: 'php',
+    option5: 'springboot',
+    option6: 'AWS',
+    option7: 'Linux',
+    option8: 'Typescript',
+    option9: 'python',
+    option10: 'SQL'
+};
+
 
 
 // <script setup>でuseRouter()をインスタンス化する
@@ -35,23 +67,39 @@ function transitionHome() {
 }
 
 // 登録(DBにアクセスする)
-function addData() {
+async function addData() {
 
+    // 入力チェックをする
+    if (dateVal.value == "" || selectVal.value == "" || numVal.value == "") {
+        errMsg.value = true;
+        return;
+    }
+
+    // heatmapのcountを学習時間から判定する
+    const weight = timeCount(numVal.value);
+    // firestoreに保存するオブジェクトを作成する
     const value = {
-        id:1,
-        item:"java",
-        wight:1,
-        studyTime:60,
-        systemTime:Date()
+        addDay: dateVal.value,
+        item: selectVal.value,
+        studyTime: numVal.value,
+        weight: weight,
+        comment: textVal.value,
+        systemTime: Date(),
     };
 
-    addDoc(collection(db, "record"), value)
-  .then((docRef) => {
-    console.log("Document written with ID: ", docRef.id);
-  })
-  .catch((error) => {
-    console.error("Error adding document: ", error);
-  });
+    await addDoc(collection(db, "record"), value)
+        .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+        });
+
+    // 入力チェック用のフラグをfalseにする(チェック→正常の場合にエラーメッセージが残存するため)
+    errMsg.value = false;
+
+    // HomeComponetに遷移
+    router.push('/');
 
 }
 
@@ -72,7 +120,7 @@ function addData() {
 }
 
 /* スクロール可能なテキストエリアのスタイル */
-.scrollable-textarea {
+#scrollable-textarea {
     width: 200px;
     /* テキストエリアの幅 */
     height: 100px;

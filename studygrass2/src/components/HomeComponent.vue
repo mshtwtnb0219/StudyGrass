@@ -1,15 +1,15 @@
 <template>
-    <div class="record">
+    <!-- <div class="record">
         <RecordComponent></RecordComponent>
     </div>
-    <GrassComponent></GrassComponent>
-        <HistoryComponent></HistoryComponent>
 
+        <HistoryComponent></HistoryComponent> -->
+        <GrassComponent></GrassComponent>
 </template>
 
 <script setup>
-import HistoryComponent from './HistoryComponent.vue';
-import RecordComponent from './RecordComponent.vue';
+//import HistoryComponent from './HistoryComponent.vue';
+//import RecordComponent from './RecordComponent.vue';
 import GrassComponent from './GrassComponent.vue';
 
 
