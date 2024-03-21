@@ -13,7 +13,7 @@
             </select>
             <label>学習時間※ 分単位</label>
             <input type="number" id="number" min="1" v-model="numVal">
-            
+
             <br>
             <label>ひとこと：</label>
             <textarea id="scrollable-textarea" v-model="textVal"></textarea>
@@ -30,7 +30,7 @@ import { useRouter } from 'vue-router'
 import { db } from '../main.js'
 import { collection, addDoc } from 'firebase/firestore'
 import { ref } from 'vue'
-import {timeCount,dorpdownOptions } from '@/common/common.js'
+import { timeCount, dorpdownOptions } from '@/common/common.js'
 
 
 
@@ -42,21 +42,6 @@ const textVal = ref('');
 
 // 入力チェック用のフラグ
 const errMsg = ref(false);
-
-
-// selectOption(暫定)
-// const dorpdownOptions = {
-//     option1: 'java',
-//     option2: 'html/css',
-//     option3: 'javascript',
-//     option4: 'php',
-//     option5: 'springboot',
-//     option6: 'AWS',
-//     option7: 'Linux',
-//     option8: 'Typescript',
-//     option9: 'python',
-//     option10: 'SQL'
-// };
 
 // <script setup>でuseRouter()をインスタンス化する
 const router = useRouter();
@@ -158,7 +143,7 @@ async function addData() {
     background-color: #0056b3;
 }
 
-.register button + button {
+.register button+button {
     margin-left: 10px;
 }
 </style>
