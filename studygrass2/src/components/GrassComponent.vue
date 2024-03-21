@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-//import { CalendarHeatmap } from 'vue3-calendar-heatmap'
 import CalHeatmap from 'cal-heatmap';
 import 'cal-heatmap/cal-heatmap.css';
 import { onMounted } from 'vue'
@@ -18,7 +17,7 @@ const heatmapData = [];
 //ページが読み込まれたタイミングでfirestoreから値を取得する
 onMounted(async () => {
 
-    // //コレクションの参照を取
+    // コレクションの参照
     const q = query(collection(db, "record"));
     //コレクション内の全てのドキュメントを取得
     const querySnapshot = await getDocs(q);
@@ -26,11 +25,11 @@ onMounted(async () => {
 
         // 各値をコンソールに出力しておく
         const data = doc.data();
-        console.log(data.addDay);
+        //console.log(data.addDay);
 
         heatmapData.push({ date: data.addDay, count: data.weight });
 
-        console.log('----ここまで----')
+        //console.log('----ここまで----')
     });
     // cal-heatmapの生成
     const cal = new CalHeatmap();
