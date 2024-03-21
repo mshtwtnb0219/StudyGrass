@@ -32,10 +32,11 @@ https://studygrass2.web.app/
 
 
 ## やりたいこと
-FirebaseのAuthenticationによる認証
-セッション管理
-CRUD処理(現状は上書き状態)
-ライフサイクルフックの完全理解
-CSS調整　現状pc画面の倍率100%にしないとレイアウトが崩れる
+FirebaseのAuthenticationによる認証  
+セッション管理  
+CRUD処理(現状は上書き状態)  
+ライフサイクルフックの完全理解  
+CSS調整　現状pc画面の倍率100%にしないとレイアウトが崩れる  
+
 
 
