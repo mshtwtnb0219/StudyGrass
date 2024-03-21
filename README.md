@@ -5,9 +5,9 @@ Visual Studio Code: 1.87.2
 Node.js v18.10.0  
 Vue3
 
-その他ツール(プラグイン)
-chart.js
-cal-heatmap
+その他ツール(プラグイン)  
+chart.js  
+cal-heatmap  
 
 ## リンク
 https://studygrass2.web.app/
