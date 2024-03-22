@@ -81,7 +81,6 @@ async function addData() {
 
     // 入力チェック用のフラグをfalseにする(チェック→正常の場合にエラーメッセージが残存するため)
     errMsg.value = false;
-
     // HomeComponetに遷移
     router.push('/');
 
