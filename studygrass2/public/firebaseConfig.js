@@ -1,6 +1,8 @@
 const firebaseConfig = {
 // ここにAPIkeyを貼り付ける
 
+
+
   };
 
 
