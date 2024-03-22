@@ -48,7 +48,6 @@ onMounted(async () => {
         // ドーナツグラフの表示データをpush
         dountGrapData.push({ item: data.item, studyTime: data.studyTime });
 
-        console.log('----ここまで----')
     });
     console.log('----cal-heatmap開始----')
     // cal-heatmapの生成
