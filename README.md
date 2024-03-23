@@ -37,9 +37,8 @@ https://studygrass2.web.app/
 ![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/f4c320e3-da9e-4543-a247-1fb59f1e1c50)  
 
 登録画面  
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/2a87f1f6-7370-4519-8d77-d6be52d10528)
 
-
-![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/c6656638-110a-4398-85ae-c91ca94e97f9)
 
 
 
