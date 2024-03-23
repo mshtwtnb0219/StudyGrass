@@ -47,7 +47,7 @@ const errMsg = ref(false);
 const router = useRouter();
 // ｷｬﾝｾﾙボタン(HomeComponetに遷移)
 function transitionHome() {
-    router.push('/');
+    router.push('/home');
 }
 
 // 登録(DBにアクセスする)
@@ -82,7 +82,7 @@ async function addData() {
     // 入力チェック用のフラグをfalseにする(チェック→正常の場合にエラーメッセージが残存するため)
     errMsg.value = false;
     // HomeComponetに遷移
-    router.push('/');
+    router.push('/home');
 
 }
 

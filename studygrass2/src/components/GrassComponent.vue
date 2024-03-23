@@ -15,7 +15,7 @@
 <script setup>
 import CalHeatmap from 'cal-heatmap';
 import 'cal-heatmap/cal-heatmap.css';
-import { onMounted, ref, nextTick } from 'vue'
+import { onMounted, ref, nextTick} from 'vue'
 import { db } from '../main.js'
 import { collection, getDocs, query } from 'firebase/firestore';
 import Chart from 'chart.js/auto';
@@ -79,8 +79,8 @@ onMounted(async () => {
                 }
             },
             columnLabelFormats: {
-        '': 'ddd' // 曜日の形式を指定
-    },
+                '': 'ddd' // 曜日の形式を指定
+            },
             date: {
                 start: new Date('2024-01-01')
             },
