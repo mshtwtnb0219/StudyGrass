@@ -1,7 +1,7 @@
 <template>
     <div class="login-container">
         <h2>Login</h2>
-        <p :class="{ 'error-message': isError }">メールアドレスまたはパスワードが誤っています</p>
+        <p :class="error-message" v-if="isError">メールアドレスまたはパスワードが誤っています</p>
         <input type="email" v-model="email" placeholder="Email" class="input-field">
         <input type="password" v-model="password" placeholder="Password" class="input-field">
         <button @click="Login" class="login-button">ﾛｸﾞｲﾝ</button>
