@@ -33,12 +33,10 @@ https://studygrass2.web.app/
 
 
 ホーム画面  
-
-![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/f4c320e3-da9e-4543-a247-1fb59f1e1c50)  
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/b747f75c-8dcd-4d43-b12d-4e001c40fa15)
 
 登録画面  
-![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/2a87f1f6-7370-4519-8d77-d6be52d10528)
-
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/acc4e1d7-7ec4-434a-a318-5ac40879e844)
 
 
 
