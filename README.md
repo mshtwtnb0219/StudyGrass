@@ -27,12 +27,20 @@ https://studygrass2.web.app/
 
 
 ## 機能
+
+ログイン画面  
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/587452cc-c400-461a-a291-388754f3428f)  
+
+
 ホーム画面  
 
-![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/f4c320e3-da9e-4543-a247-1fb59f1e1c50)
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/f4c320e3-da9e-4543-a247-1fb59f1e1c50)  
 
 登録画面  
-![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/10e9f58d-a490-4dea-8c1c-2d5f4f0bad58)
+
+
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/c6656638-110a-4398-85ae-c91ca94e97f9)
+
 
 
 ## 登録データついて
