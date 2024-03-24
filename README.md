@@ -46,7 +46,7 @@ https://studygrass2.web.app/
 
 
 ## 今後やりたいこと
-FirebaseのAuthenticationによる認証  
+  ~FirebaseのAuthenticationによる認証~  
 セッション管理  
 CRUD処理(現状は上書き状態)  
 ライフサイクルフックの完全理解  
