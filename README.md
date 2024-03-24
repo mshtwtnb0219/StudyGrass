@@ -18,21 +18,31 @@ https://studygrass2.web.app/
 登録データはfirebaseのfireStoreを利用
 
 6段階に分けてheatmapの色付けする時間が多いほど色が濃くなる  
-1分～30分  
-31分～60分  
-61分～90分  
-91分～120分  
-121分～150分  
-151分～180以上  
+
+| 時間 | 色 | 濃さ|
+| ---- | ---- | ---- |
+| 1分～30分 |   #F0FFF0 | 薄 |
+| 31分～60分  |   #C1FFC1 | ｜ |
+| 61分～90分  |   #9AFF9A | ｜ |
+| 91分～120分  |  #7CCD7C | ｜ |
+| 121分～150分 |   #4EEE94 | ｜ |
+| 151分～180以上    | #228B22 | 濃 |
+
+
 
 
 ## 機能
-ホーム画面  
 
-![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/f4c320e3-da9e-4543-a247-1fb59f1e1c50)
+ログイン画面  
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/587452cc-c400-461a-a291-388754f3428f)  
+
+
+ホーム画面  
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/b747f75c-8dcd-4d43-b12d-4e001c40fa15)
 
 登録画面  
-![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/10e9f58d-a490-4dea-8c1c-2d5f4f0bad58)
+![image](https://github.com/mshtwtnb0219/StudyGrass/assets/77442526/acc4e1d7-7ec4-434a-a318-5ac40879e844)
+
 
 
 ## 登録データついて
@@ -41,7 +51,7 @@ https://studygrass2.web.app/
 
 
 ## 今後やりたいこと
-FirebaseのAuthenticationによる認証  
+  ~FirebaseのAuthenticationによる認証~  
 セッション管理  
 CRUD処理(現状は上書き状態)  
 ライフサイクルフックの完全理解  
